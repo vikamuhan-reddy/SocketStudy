@@ -57,6 +57,7 @@ Socket programming finds applications in various domains, including web developm
 ## Program
 
 ### Server
+```py
 import socket
 server=socket.socket()
 server.bind(("localhost",9902))
@@ -71,8 +72,9 @@ while True:
     
 
 server.close()
-
+```
 ### Client
+```py
 import socket 
 client = socket.socket()
 client.connect(('localhost',9902))
@@ -81,7 +83,7 @@ client.send(bytes(name,'utf-8'))
 print(client.recv(1024).decode())
 
 client.close()
-
+```
 ## Output
 
 ### Server
